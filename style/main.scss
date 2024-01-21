@@ -1,0 +1,13 @@
+@import "_variables.scss";
+@import "typography.scss";
+
+@mixin display-flex(){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+body{
+    background: map-get($colors, background2 );
+}
