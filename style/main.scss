@@ -11,3 +11,12 @@
 body{
     background: map-get($colors, background2 );
 }
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.whole-wrapper{
+    background-color: map-get($colors, background1);
+}
