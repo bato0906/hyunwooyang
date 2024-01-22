@@ -9,15 +9,183 @@
     display: flex;
 }
 
-body{
-    background: map-get($colors, background2 );
+html{
+    //now 1 rem is 1px
+    font-size: 6.25%;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+body{
+    font-size: 18rem;
+    overflow-x: hidden;
+    background-color: map-get($colors, background2 );
 }
 
 .whole-wrapper{
-    background-color: map-get($colors, background1);
+    background-color: map-get($colors, background1 );
+    width: 100%;
 }
+
+header{
+    @include display-flex();
+    justify-content: space-between;
+    padding: $size-default*2 $size-default;
+    nav{
+        @include display-flex();
+        gap: $size-default;
+    }
+}
+
+.main, section,footer{
+    padding: $size-default;
+}
+
+.main{
+    margin: 0 0 64rem 0;
+    .img-main{
+        @include display-flex();
+        justify-content: flex-end;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .txt-main{
+        margin: $size-default*2 0;
+
+        p{
+            font-family: $ff-paragraph;
+            margin: $size-default*2 0;
+        }
+    }
+}
+.my-works{
+    .img-wrapper{
+        margin: 0 0 32rem 0;
+    }
+    .txt-wide{
+        font-size: 12rem;
+        letter-spacing: 3rem;
+    }
+
+    h2{
+        margin: 8rem 0 32rem 0;
+    }
+
+    .list-skills{
+        @include display-flex();
+        gap: 8rem;
+        flex-wrap: wrap;
+        margin: 0 0 32rem 0;
+        li{
+            padding: 6rem 10rem;
+            background-color: map-get($colors, highlight1 );
+        }
+    }
+    p{
+        margin: 0 0 32rem 0;
+    }
+    .btn{
+        margin: 0 0 48rem 0 ;
+    }
+}
+.skills{
+    h2{
+        margin: 8rem 0 48rem 0;
+    }
+    h3{
+        margin: 0 0 16rem 0;
+    }
+    p{
+        margin: 0 0 16rem 0;
+    }
+    article{
+        margin: 0 0 48rem 0;
+    }
+    .list-programs{
+        @include display-flex();
+        gap: 16rem;
+        align-items: center;
+        flex-wrap: wrap;
+        li{
+            @include display-flex();
+            align-items: center;
+            gap: 8rem;
+            margin: 0 0 16rem 0;
+        }
+        img{
+            width: 36rem;
+        }
+    }
+}
+footer{
+    background-color: map-get($colors, background3 );
+    color: map-get($colors, text2);
+    font-weight: lighter;
+    padding: 48rem 16rem;
+    margin: 32rem 0 0 0;
+    h2{
+        margin: 0 0 32rem 0;
+    }
+    address{
+        margin: 0 0 32rem 0;
+    }
+
+}
+
+//텍스트 디자인
+a{
+    cursor: pointer;
+}
+
+h2{
+    font-family: $ff-heading2;
+    font-size: $size-default*2;
+    word-break: keep-all;
+    line-height: $size-default*2 + 10rem;
+}
+p{
+    font-family: $ff-paragraph;
+    font-size: $size-default;
+    line-height: $size-default + 10rem;
+}
+h3{
+    font-family: $ff-heading3;
+    font-size: 24rem;
+    font-weight: bold;
+}
+
+//버튼 디자인
+button, .btn{
+    padding: 12rem 12rem;
+    border: 1rem solid black;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover{
+        background-color: map-get($colors, highlight1 );
+    }
+    &:active{
+    }
+}
+.btn{
+    @include display-flex();
+    justify-content: center;
+    width: 120rem;
+    font-size: 16rem;
+}
+
+//유틸리티
+.img-wrapper{
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+//TODO:수도 엘리먼트 하이라이트 
+
+//Q. button을 쓰면 안되나? 시맨틱은? 새창 열기가 안돼?!
+// a tag는 target=_blank하면 되잖아?
+

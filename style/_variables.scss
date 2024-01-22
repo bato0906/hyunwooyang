@@ -1,5 +1,15 @@
 
-$size-default: 1rem;
-$size-tiny: 0.1rem;
+$size-default: 16rem;
+$size-tiny: 1.6rem;
 
-$colors:(background1:#ece9e3, text:#1c1c1c, text2:#fff, background2:#9a9489, highlight:#e0d1c0, hightlight2:#c27a5a, footer:#474744);
+$padding-mobile: $size-default;
+
+$colors:(
+    background1:#ece9e3,
+    background2:#9a9489,
+    background3:#474744,
+    text1:#1c1c1c,
+    text2:#fff,
+    highlight1:#e0d1c0,
+    highlight2:#c27a5a,
+    );
