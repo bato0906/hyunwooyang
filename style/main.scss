@@ -286,3 +286,29 @@ button, .btn{
         object-fit: contain;
     }
 }
+
+//하이라이트
+.highlight-container, .highlight {
+    position: relative;
+  }
+  
+  .highlight-container {
+    display: inline-block;
+  }
+  .highlight-container:before {
+    content: " ";
+    display: block;
+    height: 18%;
+    width: 90%;
+    margin-left: -3px;
+    margin-right: -3px;
+    position: absolute;
+    background: map-get($colors, highlight2);
+    opacity: 0.5;
+    transform: rotate(2deg);
+    bottom: -1rem;
+    left: -1rem;
+    border-radius: 20% 25% 20% 24%;
+    padding: 10rem 3rem 3rem 10rem;
+  }
+  
