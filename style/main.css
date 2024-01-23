@@ -114,6 +114,9 @@ header {
   justify-content: space-between;
   padding: 32rem 16rem;
 }
+header h1, header nav {
+  font-weight: bold;
+}
 header a:hover {
   border: 1rem solid #c27a5a;
   border-radius: 100%;
@@ -216,6 +219,10 @@ header nav {
 @media screen and (min-width: 992px) {
   .my-works .img-wrapper {
     max-width: 30%;
+  }
+  .my-works .img-wrapper img:hover {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
   }
 }
 .my-works .txt-wide {
