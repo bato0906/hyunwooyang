@@ -23,6 +23,7 @@ body{
 .whole-wrapper{
     background-color: map-get($colors, background1 );
     width: 100%;
+    
 }
 
 header{
@@ -47,6 +48,7 @@ header{
         img{
             width: 100%;
             height: 100%;
+            max-width: 300rem;
             object-fit: contain;
         }
     }
@@ -60,6 +62,9 @@ header{
     }
 }
 .my-works{
+    article{
+        margin: 0 0 64rem 0;
+    }
     .img-wrapper{
         margin: 0 0 32rem 0;
     }
@@ -86,7 +91,7 @@ header{
         margin: 0 0 32rem 0;
     }
     .btn{
-        margin: 0 0 48rem 0 ;
+        margin: 0 0 64rem 0 ;
     }
 }
 .skills{
@@ -161,6 +166,7 @@ button, .btn{
     border: 1rem solid black;
     background-color: transparent;
     cursor: pointer;
+    font-family: $ff-paragraph;
 
     &:hover{
         background-color: map-get($colors, highlight1 );
@@ -169,9 +175,6 @@ button, .btn{
     }
 }
 .btn{
-    @include display-flex();
-    justify-content: center;
-    width: 120rem;
     font-size: 16rem;
 }
 
@@ -180,6 +183,7 @@ button, .btn{
     img{
         width: 100%;
         height: 100%;
+        max-width: 500rem;
         object-fit: contain;
     }
 }

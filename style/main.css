@@ -124,6 +124,7 @@ header nav {
 .main .img-main img {
   width: 100%;
   height: 100%;
+  max-width: 300rem;
   object-fit: contain;
 }
 .main .txt-main {
@@ -134,6 +135,9 @@ header nav {
   margin: 32rem 0;
 }
 
+.my-works article {
+  margin: 0 0 64rem 0;
+}
 .my-works .img-wrapper {
   margin: 0 0 32rem 0;
 }
@@ -161,7 +165,7 @@ header nav {
   margin: 0 0 32rem 0;
 }
 .my-works .btn {
-  margin: 0 0 48rem 0;
+  margin: 0 0 64rem 0;
 }
 
 .skills h2 {
@@ -240,23 +244,19 @@ button, .btn {
   border: 1rem solid black;
   background-color: transparent;
   cursor: pointer;
+  font-family: "Pretendard-Regular", sans-serif;
 }
 button:hover, .btn:hover {
   background-color: #e0d1c0;
 }
 .btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
-  width: 120rem;
   font-size: 16rem;
 }
 
 .img-wrapper img {
   width: 100%;
   height: 100%;
+  max-width: 500rem;
   object-fit: contain;
 }
 
