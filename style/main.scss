@@ -98,7 +98,6 @@ section{
     }
 }
 
-
 .my-works{
     article{
         margin: 0 0 64rem 0;
@@ -312,3 +311,13 @@ button, .btn{
     padding: 10rem 3rem 3rem 10rem;
   }
   
+//스크롤 시 그림 나타나게 하기
+  .my-works{
+    img{
+        opacity: 0;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        img{opacity: 1;}
+    }
+  }

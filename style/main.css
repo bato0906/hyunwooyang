@@ -395,4 +395,13 @@ button:hover, .btn:hover {
   padding: 10rem 3rem 3rem 10rem;
 }
 
+.my-works img {
+  opacity: 0;
+}
+@media screen and (min-width: 992px) {
+  .my-works img {
+    opacity: 1;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
