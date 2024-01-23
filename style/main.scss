@@ -1,6 +1,9 @@
+@charset "utf-8";
+
 @import "_variables.scss";
 @import "typography.scss";
 @import "reset.scss";
+
 
 @mixin display-flex(){
     display: -webkit-box;
@@ -150,12 +153,21 @@ section{
         margin: 0 0 16rem 0;
     }
     .list-desc{
-        position:relative;
-        left: 20rem;
+        width: 95%;
+        position: relative;
+        left:18rem;
         font-family: $ff-paragraph;
-        list-style-type: disc;
         margin: 0 0 32rem 0;
 
+        li::before{
+            position: absolute;
+            left: -18rem;
+            content:"";
+            width: 12rem;
+            height: 3rem;
+            background-color: map-get($colors, highlight2 );
+            transform: translateY(10rem) rotate(45deg);
+        }
     }
     article{
         margin: 0 0 48rem 0;
@@ -252,8 +264,6 @@ button, .btn{
 
     &:hover{
         background-color: map-get($colors, highlight1 );
-    }
-    &:active{
     }
 }
 .btn{

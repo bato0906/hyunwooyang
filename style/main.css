@@ -231,11 +231,20 @@ section {
   margin: 0 0 16rem 0;
 }
 .skills .list-desc {
+  width: 95%;
   position: relative;
-  left: 20rem;
+  left: 18rem;
   font-family: "Pretendard-Regular", sans-serif;
-  list-style-type: disc;
   margin: 0 0 32rem 0;
+}
+.skills .list-desc li::before {
+  position: absolute;
+  left: -18rem;
+  content: "";
+  width: 12rem;
+  height: 3rem;
+  background-color: #c27a5a;
+  transform: translateY(10rem) rotate(45deg);
 }
 .skills article {
   margin: 0 0 48rem 0;
@@ -342,6 +351,7 @@ button, .btn {
 button:hover, .btn:hover {
   background-color: #e0d1c0;
 }
+
 .btn {
   font-size: 16rem;
 }
