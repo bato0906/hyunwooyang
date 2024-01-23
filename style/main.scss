@@ -21,6 +21,7 @@ body{
     background-color: map-get($colors, background2 );
 }
 
+
 .whole-wrapper{
     background-color: map-get($colors, background1 );
     width: 100%;
@@ -92,7 +93,7 @@ section{
 
 .my-works{
     article{
-        margin: 0 0 128rem 0;
+        margin: 0 0 64rem 0;
 
         @media screen and (min-width: $breakpoint-large) {
             @include display-flex();
@@ -148,8 +149,13 @@ section{
     h3{
         margin: 0 0 16rem 0;
     }
-    p{
-        margin: 0 0 16rem 0;
+    .list-desc{
+        position:relative;
+        left: 20rem;
+        font-family: $ff-paragraph;
+        list-style-type: disc;
+        margin: 0 0 32rem 0;
+
     }
     article{
         margin: 0 0 48rem 0;
@@ -169,6 +175,18 @@ section{
             width: 36rem;
         }
     }
+    @media screen and (min-width: $breakpoint-large) {
+        @include display-flex();
+        justify-content: space-between;
+
+        .skill-desc{
+            position: relative;
+            top: 24rem;
+            width: 45%;
+        }
+    }
+
+
 }
 footer{
     background-color: map-get($colors, background3 );
@@ -185,8 +203,15 @@ footer{
 
     @media screen and (min-width: $breakpoint-large) {
         padding: 48rem $big-padding-lr;
+        .footer-content{
+            @include display-flex();
+            justify-content: space-between;
+            margin: 0 0 32rem 0;
+        }
+        address{
+            width: 45%;
+        }
     }
-
 }
 
 //텍스트 디자인
@@ -194,21 +219,27 @@ a{
     cursor: pointer;
 }
 
+
 h2{
     font-family: $ff-heading2;
     font-size: $size-default*2;
     word-break: keep-all;
     line-height: $size-default*2 + 10rem;
 }
-p{
+p, li, address{
     font-family: $ff-paragraph;
     font-size: $size-default;
     line-height: $size-default + 10rem;
 }
+
 h3{
     font-family: $ff-heading3;
     font-size: 24rem;
-    font-weight: bold;
+}
+h1,h2,h3, span,a, p, li{
+    &::selection{
+        background-color: map-get($colors, highlight2 );
+    }
 }
 
 //버튼 디자인
@@ -227,6 +258,9 @@ button, .btn{
 }
 .btn{
     font-size: 16rem;
+    &::selection{
+        background-color: map-get($colors, highlight2 );
+    }
 }
 
 //유틸리티

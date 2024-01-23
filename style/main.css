@@ -167,7 +167,7 @@ section {
 }
 
 .my-works article {
-  margin: 0 0 128rem 0;
+  margin: 0 0 64rem 0;
 }
 @media screen and (min-width: 992px) {
   .my-works article {
@@ -230,8 +230,12 @@ section {
 .skills h3 {
   margin: 0 0 16rem 0;
 }
-.skills p {
-  margin: 0 0 16rem 0;
+.skills .list-desc {
+  position: relative;
+  left: 20rem;
+  font-family: "Pretendard-Regular", sans-serif;
+  list-style-type: disc;
+  margin: 0 0 32rem 0;
 }
 .skills article {
   margin: 0 0 48rem 0;
@@ -257,6 +261,20 @@ section {
 .skills .list-programs img {
   width: 36rem;
 }
+@media screen and (min-width: 992px) {
+  .skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+  .skills .skill-desc {
+    position: relative;
+    top: 24rem;
+    width: 45%;
+  }
+}
 
 footer {
   background-color: #474744;
@@ -275,6 +293,17 @@ footer address {
   footer {
     padding: 48rem 10%;
   }
+  footer .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 32rem 0;
+  }
+  footer address {
+    width: 45%;
+  }
 }
 
 a {
@@ -288,7 +317,7 @@ h2 {
   line-height: 42rem;
 }
 
-p {
+p, li, address {
   font-family: "Pretendard-Regular", sans-serif;
   font-size: 16rem;
   line-height: 26rem;
@@ -297,7 +326,10 @@ p {
 h3 {
   font-family: "Pretendard-Regular", serif;
   font-size: 24rem;
-  font-weight: bold;
+}
+
+h1::selection, h2::selection, h3::selection, span::selection, a::selection, p::selection, li::selection {
+  background-color: #c27a5a;
 }
 
 button, .btn {
@@ -312,6 +344,9 @@ button:hover, .btn:hover {
 }
 .btn {
   font-size: 16rem;
+}
+.btn::selection {
+  background-color: #c27a5a;
 }
 
 .img-wrapper img {
