@@ -81,6 +81,7 @@ html {
 }
 
 body {
+  font-family: "Pretendard-Regular", sans-serif;
   font-size: 18rem;
   overflow-x: hidden;
   background-color: #9a9489;
@@ -90,8 +91,16 @@ body {
   background-color: #ece9e3;
   width: 100%;
 }
+@media screen and (min-width: 992px) {
+  .whole-wrapper {
+    width: 80%;
+    max-width: 1300rem;
+    margin: 0 auto;
+  }
+}
 
 header {
+  font-family: "Nanum Myeongjo", serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -106,13 +115,27 @@ header nav {
   display: flex;
   gap: 16rem;
 }
+@media screen and (min-width: 992px) {
+  header {
+    padding: 32rem 10%;
+  }
+}
 
 .main, section, footer {
   padding: 16rem;
 }
+@media screen and (min-width: 992px) {
+  .main, section, footer {
+    padding: 0 10%;
+  }
+}
+
+section {
+  margin: 0 0 128rem 0;
+}
 
 .main {
-  margin: 0 0 64rem 0;
+  position: relative;
 }
 .main .img-main {
   display: -webkit-box;
@@ -134,12 +157,45 @@ header nav {
   font-family: "Pretendard-Regular", sans-serif;
   margin: 32rem 0;
 }
+@media screen and (min-width: 992px) {
+  .main .txt-main {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 35%;
+  }
+}
 
 .my-works article {
-  margin: 0 0 64rem 0;
+  margin: 0 0 128rem 0;
+}
+@media screen and (min-width: 992px) {
+  .my-works article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 992px) {
+  .my-works .txt-wrapper {
+    max-width: 50%;
+  }
 }
 .my-works .img-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
   margin: 0 0 32rem 0;
+}
+@media screen and (min-width: 992px) {
+  .my-works .img-wrapper {
+    max-width: 30%;
+  }
 }
 .my-works .txt-wide {
   font-size: 12rem;
@@ -214,6 +270,11 @@ footer h2 {
 }
 footer address {
   margin: 0 0 32rem 0;
+}
+@media screen and (min-width: 992px) {
+  footer {
+    padding: 48rem 10%;
+  }
 }
 
 a {

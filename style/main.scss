@@ -15,6 +15,7 @@ html{
 }
 
 body{
+    font-family: $ff-paragraph;
     font-size: 18rem;
     overflow-x: hidden;
     background-color: map-get($colors, background2 );
@@ -23,10 +24,16 @@ body{
 .whole-wrapper{
     background-color: map-get($colors, background1 );
     width: 100%;
-    
+
+    @media screen and (min-width: $breakpoint-large) {
+        width: 80%;
+        max-width: 1300rem;
+        margin: 0 auto;
+    }
 }
 
 header{
+    font-family: $ff-heading2;
     @include display-flex();
     justify-content: space-between;
     padding: $size-default*2 $size-default;
@@ -34,14 +41,27 @@ header{
         @include display-flex();
         gap: $size-default;
     }
+
+    @media screen and (min-width: $breakpoint-large) {
+        padding: $size-default*2 $big-padding-lr;
+    }
+    
 }
 
-.main, section,footer{
+.main, section, footer{
     padding: $size-default;
+
+    @media screen and (min-width: $breakpoint-large) {
+        padding: 0 $big-padding-lr;
+    }
+}
+
+section{
+    margin: 0 0 128rem 0;
 }
 
 .main{
-    margin: 0 0 64rem 0;
+    position:relative;
     .img-main{
         @include display-flex();
         justify-content: flex-end;
@@ -54,19 +74,46 @@ header{
     }
     .txt-main{
         margin: $size-default*2 0;
-
         p{
             font-family: $ff-paragraph;
             margin: $size-default*2 0;
         }
+
+        @media screen and (min-width: $breakpoint-large) {
+            position: absolute;
+            top:10%;
+            left:$big-padding-lr;
+            width: 35%;
+            
+        }
     }
 }
+
+
 .my-works{
     article{
-        margin: 0 0 64rem 0;
+        margin: 0 0 128rem 0;
+
+        @media screen and (min-width: $breakpoint-large) {
+            @include display-flex();
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+    .txt-wrapper{
+        @media  screen and (min-width: $breakpoint-large) {
+            max-width: 50%; 
+        }
     }
     .img-wrapper{
-        margin: 0 0 32rem 0;
+        @include display-flex();
+        justify-content: center;
+        margin: 0 0 32rem 0 ;
+
+        @media  screen and (min-width: $breakpoint-large){
+            max-width: 30%;
+        }
+
     }
     .txt-wide{
         font-size: 12rem;
@@ -136,6 +183,10 @@ footer{
         margin: 0 0 32rem 0;
     }
 
+    @media screen and (min-width: $breakpoint-large) {
+        padding: 48rem $big-padding-lr;
+    }
+
 }
 
 //텍스트 디자인
@@ -187,9 +238,3 @@ button, .btn{
         object-fit: contain;
     }
 }
-
-//TODO:수도 엘리먼트 하이라이트 
-
-//Q. button을 쓰면 안되나? 시맨틱은? 새창 열기가 안돼?!
-// a tag는 target=_blank하면 되잖아?
-
