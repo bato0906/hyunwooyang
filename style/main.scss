@@ -48,6 +48,7 @@ header{
 
     @media screen and (min-width: $breakpoint-large) {
         padding: $size-default*2 $big-padding-lr;
+        margin: 0 0 64rem 0;
     }
     
 }

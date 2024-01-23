@@ -118,6 +118,7 @@ header nav {
 @media screen and (min-width: 992px) {
   header {
     padding: 32rem 10%;
+    margin: 0 0 64rem 0;
   }
 }
 
