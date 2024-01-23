@@ -163,8 +163,8 @@ section{
             position: absolute;
             left: -18rem;
             content:"";
-            width: 12rem;
-            height: 3rem;
+            width: 5rem;
+            height: 5rem;
             background-color: map-get($colors, highlight2 );
             transform: translateY(10rem) rotate(45deg);
         }
