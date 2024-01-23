@@ -43,10 +43,10 @@ header{
     @include display-flex();
     justify-content: space-between;
     padding: $size-default*2 $size-default;
-    h1, nav{
-        font-weight: bold;
-    }
 
+    h1, nav{
+        font-family: $ff-heading2;
+    }
     a:hover{
         border: 1rem solid map-get($colors, highlight2);
         border-radius: 100%;
