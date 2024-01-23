@@ -1,10 +1,7 @@
 @charset "utf-8";
-
 @import "_variables.scss";
 @import "typography.scss";
 @import "reset.scss";
-
-
 @mixin display-flex(){
     display: -webkit-box;
     display: -ms-flexbox;
@@ -26,6 +23,7 @@ body{
 
 
 .whole-wrapper{
+    position:relative;
     background-color: map-get($colors, background1 );
     width: 100%;
 
@@ -37,17 +35,24 @@ body{
 }
 
 header{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 100;
     font-family: $ff-heading2;
     @include display-flex();
     justify-content: space-between;
     padding: $size-default*2 $size-default;
+
+    a:hover{
+        border: 1rem solid map-get($colors, highlight2);
+        border-radius: 100%;
+    }
+
     nav{
         @include display-flex();
         gap: $size-default;
-
-        a:hover{
-            text-decoration: underline;
-        }
     }
 
     @media screen and (min-width: $breakpoint-large) {
@@ -65,15 +70,21 @@ header{
     }
 }
 
-section{
-    margin: 0 0 128rem 0;
-}
-
 .main{
     position:relative;
+    padding: 20% $size-default;
+
+    @media screen and (min-width: $breakpoint-large) {
+        padding: 20% $big-padding-lr;
+    }
+
     .img-main{
         @include display-flex();
-        justify-content: flex-end;
+            justify-content: center;
+        @media screen and (min-width:$breakpoint-large) {
+            justify-content: flex-end;
+        }
+
         img{
             width: 100%;
             height: 100%;
@@ -90,7 +101,7 @@ section{
 
         @media screen and (min-width: $breakpoint-large) {
             position: absolute;
-            top:10%;
+            top:30%;
             left:$big-padding-lr;
             width: 35%;
             
@@ -99,8 +110,9 @@ section{
 }
 
 .my-works{
+    margin: 0 0 64rem 0;
     article{
-        margin: 0 0 64rem 0;
+        margin: 0 0 128rem 0;
 
         @media screen and (min-width: $breakpoint-large) {
             @include display-flex();
@@ -145,11 +157,10 @@ section{
     p{
         margin: 0 0 32rem 0;
     }
-    .btn{
-        margin: 0 0 64rem 0 ;
-    }
+
 }
 .skills{
+    margin: 0 0 128rem 0;
     h2{
         margin: 8rem 0 48rem 0;
     }
@@ -209,7 +220,6 @@ footer{
     color: map-get($colors, text2);
     font-weight: lighter;
     padding: 48rem 16rem;
-    margin: 32rem 0 0 0;
     h2{
         margin: 0 0 32rem 0;
     }
@@ -299,8 +309,8 @@ button, .btn{
     display: block;
     height: 18%;
     width: 90%;
-    margin-left: -3px;
-    margin-right: -3px;
+    margin-left: -3rem;
+    margin-right: -3rem;
     position: absolute;
     background: map-get($colors, highlight2);
     opacity: 0.5;
@@ -318,6 +328,8 @@ button, .btn{
     }
 
     @media screen and (min-width: $breakpoint-large) {
-        img{opacity: 1;}
+        img{
+            opacity: 1;
+        }
     }
   }

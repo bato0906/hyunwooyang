@@ -88,6 +88,7 @@ body {
 }
 
 .whole-wrapper {
+  position: relative;
   background-color: #ece9e3;
   width: 100%;
 }
@@ -100,6 +101,11 @@ body {
 }
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   font-family: "Nanum Myeongjo", serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,15 +114,16 @@ header {
   justify-content: space-between;
   padding: 32rem 16rem;
 }
+header a:hover {
+  border: 1rem solid #c27a5a;
+  border-radius: 100%;
+}
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   gap: 16rem;
-}
-header nav a:hover {
-  text-decoration: underline;
 }
 @media screen and (min-width: 992px) {
   header {
@@ -134,19 +141,26 @@ header nav a:hover {
   }
 }
 
-section {
-  margin: 0 0 128rem 0;
-}
-
 .main {
   position: relative;
+  padding: 20% 16rem;
+}
+@media screen and (min-width: 992px) {
+  .main {
+    padding: 20% 10%;
+  }
 }
 .main .img-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  .main .img-main {
+    justify-content: flex-end;
+  }
 }
 .main .img-main img {
   width: 100%;
@@ -164,14 +178,17 @@ section {
 @media screen and (min-width: 992px) {
   .main .txt-main {
     position: absolute;
-    top: 10%;
+    top: 30%;
     left: 10%;
     width: 35%;
   }
 }
 
-.my-works article {
+.my-works {
   margin: 0 0 64rem 0;
+}
+.my-works article {
+  margin: 0 0 128rem 0;
 }
 @media screen and (min-width: 992px) {
   .my-works article {
@@ -224,10 +241,10 @@ section {
 .my-works p {
   margin: 0 0 32rem 0;
 }
-.my-works .btn {
-  margin: 0 0 64rem 0;
-}
 
+.skills {
+  margin: 0 0 128rem 0;
+}
 .skills h2 {
   margin: 8rem 0 48rem 0;
 }
@@ -294,7 +311,6 @@ footer {
   color: #fff;
   font-weight: lighter;
   padding: 48rem 16rem;
-  margin: 32rem 0 0 0;
 }
 footer h2 {
   margin: 0 0 32rem 0;
@@ -383,8 +399,8 @@ button:hover, .btn:hover {
   display: block;
   height: 18%;
   width: 90%;
-  margin-left: -3px;
-  margin-right: -3px;
+  margin-left: -3rem;
+  margin-right: -3rem;
   position: absolute;
   background: #c27a5a;
   opacity: 0.5;
