@@ -44,6 +44,9 @@ header{
     @include display-flex();
     justify-content: space-between;
     padding: $size-default*2 $size-default;
+    h1{
+        font-weight: bold;
+    }
 
     a:hover{
         border: 1rem solid map-get($colors, highlight2);
