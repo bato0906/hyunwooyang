@@ -86,7 +86,7 @@ html {
 }
 
 body {
-  font-family: "Pretendard-Regular", "Noto Sans KR", sans-serif;
+  font-family: "Pretendard-Regular", sans-serif;
   font-size: 18rem;
   overflow-x: hidden;
   background-color: #9a9489;
@@ -111,7 +111,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
-  font-family: "Nanum Myeongjo", "NotoSerifKR", serif;
+  font-family: "Nanum Myeongjo", serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -121,7 +121,7 @@ header {
 }
 header h1,
 header nav {
-  font-family: "Nanum Myeongjo", "NotoSerifKR", serif;
+  font-family: "Nanum Myeongjo", serif;
 }
 header a:hover {
   border: 1rem solid #c27a5a;
@@ -185,7 +185,7 @@ footer {
   margin: 32rem 0;
 }
 .main .txt-main p {
-  font-family: "Pretendard-Regular", "Noto Sans KR", sans-serif;
+  font-family: "Pretendard-Regular", sans-serif;
   margin: 32rem 0;
 }
 @media screen and (min-width: 992px) {
@@ -272,7 +272,7 @@ footer {
   width: 95%;
   position: relative;
   left: 18rem;
-  font-family: "Pretendard-Regular", "Noto Sans KR", sans-serif;
+  font-family: "Pretendard-Regular", sans-serif;
   margin: 0 0 32rem 0;
 }
 .skills .list-desc li::before {
@@ -357,7 +357,7 @@ a {
 }
 
 h2 {
-  font-family: "Nanum Myeongjo", "NotoSerifKR", serif;
+  font-family: "Nanum Myeongjo", serif;
   font-size: 32rem;
   word-break: keep-all;
   line-height: 42rem;
@@ -366,13 +366,13 @@ h2 {
 p,
 li,
 address {
-  font-family: "Pretendard-Regular", "Noto Sans KR", sans-serif;
+  font-family: "Pretendard-Regular", sans-serif;
   font-size: 16rem;
   line-height: 26rem;
 }
 
 h3 {
-  font-family: "Pretendard-Regular", "Noto Sans KR", sans-serif;
+  font-family: "Pretendard-Regular", sans-serif;
   font-size: 24rem;
 }
 
@@ -392,7 +392,7 @@ button,
   border: 1rem solid black;
   background-color: transparent;
   cursor: pointer;
-  font-family: "Pretendard-Regular", "Noto Sans KR", sans-serif;
+  font-family: "Pretendard-Regular", sans-serif;
 }
 button:hover,
 .btn:hover {
