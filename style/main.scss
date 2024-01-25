@@ -2,29 +2,28 @@
 @import "_variables.scss";
 @import "typography.scss";
 @import "reset.scss";
-@mixin display-flex(){
+@mixin display-flex() {
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
 }
 
-html{
+html {
     //now 1 rem is 1px
     font-size: 6.25%;
 }
 
-body{
+body {
     font-family: $ff-paragraph;
     font-size: 18rem;
     overflow-x: hidden;
-    background-color: map-get($colors, background2 );
+    background-color: map-get($colors, background2);
 }
 
-
-.whole-wrapper{
-    position:relative;
-    background-color: map-get($colors, background1 );
+.whole-wrapper {
+    position: relative;
+    background-color: map-get($colors, background1);
     width: 100%;
 
     @media screen and (min-width: $breakpoint-large) {
@@ -33,38 +32,40 @@ body{
         margin: 0 auto;
     }
 }
-header{
+header {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 100;
     font-family: $ff-heading2;
     @include display-flex();
     justify-content: space-between;
-    padding: $size-default*2 $size-default;
+    padding: $size-default * 2 $size-default;
 
-    h1, nav{
+    h1,
+    nav {
         font-family: $ff-heading2;
     }
-    a:hover{
+    a:hover {
         border: 1rem solid map-get($colors, highlight2);
         border-radius: 100%;
     }
 
-    nav{
+    nav {
         @include display-flex();
         gap: $size-default;
     }
 
     @media screen and (min-width: $breakpoint-large) {
-        padding: $size-default*2 $big-padding-lr;
+        padding: $size-default * 2 $big-padding-lr;
         margin: 0 0 64rem 0;
     }
-    
 }
 
-.main, section, footer{
+.main,
+section,
+footer {
     padding: $size-default;
 
     @media screen and (min-width: $breakpoint-large) {
@@ -72,47 +73,46 @@ header{
     }
 }
 
-.main{
-    position:relative;
+.main {
+    position: relative;
     padding: 20% $size-default;
 
     @media screen and (min-width: $breakpoint-large) {
         padding: 20% $big-padding-lr;
     }
 
-    .img-main{
+    .img-main {
         @include display-flex();
-            justify-content: center;
-        @media screen and (min-width:$breakpoint-large) {
+        justify-content: center;
+        @media screen and (min-width: $breakpoint-large) {
             justify-content: flex-end;
         }
 
-        img{
+        img {
             width: 100%;
             height: 100%;
             max-width: 300rem;
             object-fit: contain;
         }
     }
-    .txt-main{
-        margin: $size-default*2 0;
-        p{
+    .txt-main {
+        margin: $size-default * 2 0;
+        p {
             font-family: $ff-paragraph;
-            margin: $size-default*2 0;
+            margin: $size-default * 2 0;
         }
 
         @media screen and (min-width: $breakpoint-large) {
             position: absolute;
-            top:30%;
-            left:$big-padding-lr;
+            top: 30%;
+            left: $big-padding-lr;
             width: 35%;
-            
         }
     }
 }
-.my-works{
+.my-works {
     margin: 0 0 64rem 0;
-    article{
+    article {
         margin: 0 0 128rem 0;
 
         @media screen and (min-width: $breakpoint-large) {
@@ -121,88 +121,87 @@ header{
             justify-content: space-between;
         }
     }
-    .txt-wrapper{
-        @media  screen and (min-width: $breakpoint-large) {
-            max-width: 50%; 
+    .txt-wrapper {
+        @media screen and (min-width: $breakpoint-large) {
+            max-width: 50%;
         }
     }
-    .img-wrapper{
+    .img-wrapper {
         @include display-flex();
         justify-content: center;
-        margin: 0 0 32rem 0 ;
+        margin: 0 0 32rem 0;
 
-        @media  screen and (min-width: $breakpoint-large){
+        @media screen and (min-width: $breakpoint-large) {
             max-width: 30%;
-            img:hover{
+            img:hover {
                 transition: 0.5s ease-in-out;
                 transform: scale(1.1);
             }
         }
     }
-    .txt-wide{
+    .txt-wide {
         font-size: 12rem;
         letter-spacing: 3rem;
     }
 
-    h2{
+    h2 {
         margin: 8rem 0 32rem 0;
     }
 
-    .list-skills{
+    .list-skills {
         @include display-flex();
         gap: 8rem;
         flex-wrap: wrap;
         margin: 0 0 32rem 0;
-        li{
+        li {
             padding: 6rem 10rem;
-            background-color: map-get($colors, highlight1 );
+            background-color: map-get($colors, highlight1);
         }
     }
-    p{
+    p {
         margin: 0 0 32rem 0;
     }
-
 }
-.skills{
+.skills {
     margin: 0 0 128rem 0;
-    h2{
+    h2 {
         margin: 8rem 0 48rem 0;
     }
-    h3{
+    h3 {
         margin: 0 0 16rem 0;
     }
-    .list-desc{
+    .list-desc {
         width: 95%;
         position: relative;
-        left:18rem;
+        left: 18rem;
         font-family: $ff-paragraph;
         margin: 0 0 32rem 0;
 
-        li::before{
+        li::before {
             position: absolute;
             left: -18rem;
-            content:"";
+            content: "";
             width: 5rem;
             height: 5rem;
-            background-color: map-get($colors, highlight2 );
+            background-color: map-get($colors, highlight2);
             transform: translateY(10rem) rotate(45deg);
         }
     }
-    article{
+    article {
         margin: 0 0 48rem 0;
     }
-    .list-programs{
+    .list-programs {
         @include display-flex();
         gap: 16rem;
         align-items: center;
         flex-wrap: wrap;
-        li{
+        li {
             @include display-flex();
             align-items: center;
             gap: 8rem;
             margin: 0 0 16rem 0;
         }
-        img{
+        img {
             width: 36rem;
         }
     }
@@ -210,89 +209,96 @@ header{
         @include display-flex();
         justify-content: space-between;
 
-        .skill-desc{
+        .skill-desc {
             position: relative;
             top: 24rem;
             width: 45%;
         }
     }
-
-
 }
-footer{
-    background-color: map-get($colors, background3 );
+footer {
+    background-color: map-get($colors, background3);
     color: map-get($colors, text2);
     font-weight: lighter;
     padding: 48rem 16rem;
-    h2{
+    h2 {
         margin: 0 0 32rem 0;
     }
-    address{
+    address {
         margin: 0 0 32rem 0;
     }
 
     @media screen and (min-width: $breakpoint-large) {
         padding: 48rem $big-padding-lr;
-        .footer-content{
+        .footer-content {
             @include display-flex();
             justify-content: space-between;
             margin: 0 0 32rem 0;
         }
-        address{
+        address {
             width: 45%;
         }
     }
 }
 
 //텍스트 디자인
-a{
+a {
     cursor: pointer;
 }
 
-h2{
+h2 {
     font-family: $ff-heading2;
-    font-size: $size-default*2;
+    font-size: $size-default * 2;
     word-break: keep-all;
-    line-height: $size-default*2 + 10rem;
+    line-height: $size-default * 2 + 10rem;
 }
-p, li, address{
+p,
+li,
+address {
     font-family: $ff-paragraph;
     font-size: $size-default;
     line-height: $size-default + 10rem;
 }
 
-h3{
+h3 {
     font-family: $ff-heading3;
     font-size: 24rem;
 }
-h1,h2,h3, span,a, p, li{
-    &::selection{
-        background-color: map-get($colors, highlight2 );
+h1,
+h2,
+h3,
+span,
+a,
+p,
+li {
+    &::selection {
+        background-color: map-get($colors, highlight2);
     }
 }
 
 //버튼 디자인
-button, .btn{
+button,
+.btn {
     padding: 12rem 12rem;
     border: 1rem solid black;
     background-color: transparent;
     cursor: pointer;
     font-family: $ff-paragraph;
 
-    &:hover{
-        background-color: map-get($colors, highlight1 );
+    &:hover {
+        background-color: map-get($colors, highlight1);
     }
 }
-.btn{
+.btn {
     font-size: 16rem;
-    &::selection{
-        background-color: map-get($colors, highlight2 );
+    &::selection {
+        background-color: map-get($colors, highlight2);
     }
 }
 
 //유틸리티
-.img-wrapper{
-    img{
+.img-wrapper {
+    img {
         width: 100%;
         height: 100%;
         max-width: 500rem;
@@ -301,14 +307,15 @@ button, .btn{
 }
 
 //하이라이트
-.highlight-container, .highlight {
+.highlight-container,
+.highlight {
     position: relative;
-  }
-  
-  .highlight-container {
+}
+
+.highlight-container {
     display: inline-block;
-  }
-  .highlight-container:before {
+}
+.highlight-container:before {
     content: " ";
     display: block;
     height: 18%;
@@ -323,17 +330,17 @@ button, .btn{
     left: -1rem;
     border-radius: 20% 25% 20% 24%;
     padding: 10rem 3rem 3rem 10rem;
-  }
-  
+}
+
 //스크롤 시 그림 나타나게 하기
-  .my-works{
-    img{
+.my-works {
+    img {
         opacity: 0;
     }
 
     @media screen and (min-width: $breakpoint-large) {
-        img{
+        img {
             opacity: 1;
         }
     }
-  }
+}
